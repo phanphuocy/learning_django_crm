@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <h1>Hello world</h1>
+        <ul>
+            {% for lead in leads %}
+                <li><a href="/leads/{{ lead.id }}">{{ lead.first_name }} {{ lead.last_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
