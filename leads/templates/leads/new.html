@@ -1,13 +1,10 @@
-<html>
-    <head>
-        <title>New</title>
-    </head>
-    <body>
-        <h1>New lead</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+     <h1>New lead</h1>
         <form method='post'>
             {% csrf_token %}
             {{ form.as_p }}
             <button type='submit'>Submit</button>
         </form>
-    </body>
-</html>
+{% endblock content %}

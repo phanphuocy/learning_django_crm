@@ -1,13 +1,10 @@
-<html>
-    <head>
-        <title>Homepage</title>
-    </head>
-    <body>
-        <h1>Hello world</h1>
-        <p>{{ lead.first_name }} {{ lead.last_name }}</p>
-        <div>
-            <a href="{% url 'leads:list_update' lead.id %}">Update</a>
-            <a href="{% url 'leads:list_delete' lead.id %}">Delete</a>
-        </div>
-    </body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">Detail of {{ lead.first_name }} {{ lead.last_name }}</h1>
+    <p>{{ lead.first_name }} {{ lead.last_name }}</p>
+    <div>
+        <a href="{% url 'leads:lead_update' lead.id %}">Update</a>
+        <a href="{% url 'leads:lead_delete' lead.id %}">Delete</a>
+    </div>
+{% endblock content %}
